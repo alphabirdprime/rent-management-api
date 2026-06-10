@@ -46,6 +46,12 @@ fs.readdirSync(routes)
     app.use(`/${routeName}`, require(join(routes, file)) )
   })
 /* eslint-enable */
+app.use('/', (req, res) => {
+  res.json({
+    app: 'Rent Management',
+    version: '0.0.1',
+  });
+});
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
