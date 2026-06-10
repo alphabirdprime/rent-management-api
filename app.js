@@ -47,6 +47,7 @@ fs.readdirSync(routes)
   })
 /* eslint-enable */
 app.use('/', (req, res) => {
+  console.log('Home API fetched');
   res.json({
     app: 'Rent Management',
     version: '0.0.1',
